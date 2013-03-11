@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	(c) Copyright 2012, University of Ottawa	
+-->
+<project name="uo.log" basedir=".">
+ <!-- load xml properties -->
+  <target name="uo.log.transtype">
+  	<tstamp>
+		<format property="log.date" pattern="yyyyMMdd"/>
+	</tstamp>
+	<tstamp>
+		<format property="current.date.sec" pattern="yyyyMMddHHmmssSSS"/>
+	</tstamp>
+	<mkdir dir="${dita.dir}/logs/${transtype}" />
+	<echo 	file="${dita.dir}/logs/${transtype}/${transtype}-${log.date}.log" append="true">${current.date.sec};${args.input}${line.separator}</echo>
+</target>
+ 
+</project>
