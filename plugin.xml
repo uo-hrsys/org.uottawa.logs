@@ -2,7 +2,7 @@
   -->
 <plugin id="org.uottawa.log">
   
-  <feature extension="depend.preprocess.pre" value="uo.log.transtype"/>
+  <feature extension="depend.preprocess.gen-list.pre" value="uo.log.transtype"/>
   <feature extension="dita.conductor.target.relative" file="build.xml" type="file" />
   	
 </plugin>
