@@ -12,14 +12,22 @@ logs/html5
 
 Then it create one texte file per day.
 
-ls would return
+ls would return a list of log per day
 
+```
+ls
 pdf-20120621.log
 pdf-20120620.log
 pdf-20120619.log
-...
+(...)
+```
 
-Using wc -l in the directory of your choice will return the number of lines per file and 
+Using 
+```
+   find . -name '*.log' | xargs wc -l
+````
+
+in the directory of your choice will return the number of lines per file and 
 the total count of the lines (one line = 1 call)
 
 You can concatenate files and analyse the file in Excel because there are output as csv.
